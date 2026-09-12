@@ -29,13 +29,11 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.25",
-    "lighthouse": "^13.4.1",
-    "puppeteer-core": "^25.10.0",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^5.0.0"

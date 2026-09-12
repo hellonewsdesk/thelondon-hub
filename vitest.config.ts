@@ -16,9 +16,15 @@ export default defineConfig({
   // rolldown-vite the transformer is oxc and this esbuild key is silently
   // ignored — if the runner ever moves to rolldown, move this to
   // `oxc: { jsx: { runtime: 'automatic', importSource: 'react' } }`.
-  esbuild: {
-    jsx: 'automatic',
-    jsxImportSource: 'react',
+  // This IS the rolldown case the note above anticipated: vitest 5 transforms
+  // with oxc, which ignores an `esbuild` key entirely — the symptom was
+  // StoryCard.test.ts failing to parse its JSX at import time, and tsc
+  // rejecting `jsx` as unknown on ESBuildOptions.
+  oxc: {
+    jsx: {
+      runtime: 'automatic',
+      importSource: 'react',
+    },
   },
   test: {
     environment: 'node',
