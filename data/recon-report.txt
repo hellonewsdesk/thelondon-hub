@@ -1,0 +1,161 @@
+
+  WP RECON  ·  The London Hub  ·  thelondonhub.co.uk
+  https://thelondonhub.co.uk/wp-json/wp/v2
+==========================================================================
+
+0. Site identity (GET /wp-json/)
+--------------------------------------------------------------------------
+  name                     "The London Hub"
+  description              "Your Daily Source for Reliable News"
+  url                      https://thelondonhub.co.uk
+  timezone                 Europe/London
+  namespaces               oembed/1.0, contact-form-7/v1, template-kit-import/v2, yoast/v1, elementor-one/v1, elementor/v1, elementor-pro/v1, wp-mail-smtp/v1
+
+1. REST API reachability (no auth)
+--------------------------------------------------------------------------
+  GET /posts               PASS  200 OK, no credentials sent (8333ms)
+
+2. Content volume
+--------------------------------------------------------------------------
+  X-WP-Total               105
+  X-WP-TotalPages          105  (at per_page=1)
+  Pages at per_page=12     9
+  Sitemap fetches          2  (per_page=100)
+  Newest post date         2026-09-10T12:03:41  (modified 2026-09-10T12:03:41)
+
+3. Permalink structure (from post.link — never invented)
+--------------------------------------------------------------------------
+  Live example             https://thelondonhub.co.uk/dan-lawrence-edgbaston-test-fifty/
+  Segments across 100      CONSISTENT  (1 seg: 100)
+  Trailing slash           100 with / 0 without  -> ALWAYS trailing
+  Next route implied       app/[slug]/page.tsx (root-level postname)
+
+4. Category permalink pattern
+--------------------------------------------------------------------------
+  Example                  https://thelondonhub.co.uk/category/uk-news/
+  Pattern                  /category/%category%/
+  Trailing slash           yes
+
+5. Body markup verdict — 5 most recent posts
+--------------------------------------------------------------------------
+
+  [1] Dan Lawrence Shines with Third Consecutive Fifty in
+      slug     dan-lawrence-edgbaston-test-fifty
+      verdict  CLEAN
+      length   4,888 chars
+      scripts  2 inline <script> (2 JSON-LD — must strip, we emit our own)
+      imgs     0 inline <img> in body
+      tags     px8 h2x4 ax3 lix3 h3x3 scriptx2 ulx1 brx1
+
+  [2] Zverev Secures US Open Semi-Final Spot After Key Win
+      slug     zverev-us-open-semi-final-advance
+      verdict  CLEAN
+      length   6,159 chars
+      scripts  2 inline <script> (2 JSON-LD — must strip, we emit our own)
+      imgs     0 inline <img> in body
+      tags     px8 h2x3 ax2 scriptx2 brx1
+
+  [3] Tim Montgomerie Quits Reform UK, Urges Farage to  Get a
+      slug     tim-montgomerie-quits-reform-uk-urges-farage-to-get-a-grip
+      verdict  CLEAN
+      length   7,082 chars
+      scripts  2 inline <script> (2 JSON-LD — must strip, we emit our own)
+      imgs     0 inline <img> in body
+      tags     px7 strongx6 h2x4 brx4 ax3 lix3 scriptx2 ulx1
+
+  [4] Dolly Parton Hotel and Museum Set for Nashville Debut
+      slug     dolly-parton-hotel-museum-nashville-debut
+      verdict  CLEAN
+      length   5,683 chars
+      scripts  2 inline <script> (2 JSON-LD — must strip, we emit our own)
+      imgs     0 inline <img> in body
+      tags     px10 h2x3 ax2 lix2 scriptx2 ulx1 brx1
+
+  [5] West Ham Secure 3-0 Victory Over Derby County
+      slug     west-ham-3-0-derby-county-joel-piroe-scores
+      verdict  CLEAN
+      length   6,667 chars
+      scripts  2 inline <script> (2 JSON-LD — must strip, we emit our own)
+      imgs     0 inline <img> in body
+      tags     px9 brx5 h2x4 lix4 strongx4 ax2 scriptx2 ulx1
+
+6. Featured image coverage (decides image-led design viability)
+--------------------------------------------------------------------------
+  featured_media set       99 / 100  (99% across _fields sample)
+  resolves via _embed      19 / 20  (95%)
+  inline <img> in bodies   0 across 20 posts (0 posts have at least one)
+  Example image            1200x800 https://thelondonhub.co.uk/wp-content/uploads/2026/09/dan-lawrence-edg
+  Example alt              "Dan Lawrence Shines with Third Consecutive Fifty in"
+  VERDICT                  IMAGE-LED VIABLE (~99%)
+
+7. _embedded coverage / 20 posts
+--------------------------------------------------------------------------
+  author                    20 / 20  always present
+  wp:term                   20 / 20  always present
+  wp:featuredmedia          19 / 20  OPTIONAL — never assume
+  author (post 1)          Laura Phil (laura-phil)
+  wp:term groups           categoryx1, post_tagx5
+
+8. Categories (hide_empty=true)
+--------------------------------------------------------------------------
+  Non-empty categories     104
+  With <=1 post            70 of 104  — LONG TAIL, curate nav by hand
+
+   count  slug                             name
+      36  uk-news                          UK News
+      34  world-news                       World News
+      32  google-news                      Google News
+      19  football                         Football
+      14  technology                       Technology
+      11  sports                           Sports
+      10  entertainment                    Entertainment
+       9  premier-league                   Premier League
+       8  sports-news                      Sports News
+       8  lifestyle                        Lifestyle
+       6  match-previews                   Match Previews
+       6  business                         Business
+       5  politics                         Politics
+       4  culture                          culture
+       4  sports-analysis                  Sports Analysis
+       4  health                           Health
+       3  biography                        Biography
+       3  trending-stories                 Trending Stories
+       3  television                       Television
+       3  match-analysis                   Match Analysis
+       2  cricket                          Cricket
+       2  live-events                      Live Events
+       2  literature                       Literature
+       2  english-football                 English Football
+       2  renewable-energy                 Renewable Energy
+       2  ai-automation                    AI   Automation
+       2  history                          HISTORY
+       2  technology-innovation            Technology   Innovation
+       2  celebrity-news                   Celebrity News
+       2  player-profiles                  Player Profiles
+  ...and 74 more
+
+9. Payload cost
+--------------------------------------------------------------------------
+  12 posts + _embed           11780ms     753 KB  EXCEEDS 10s BUDGET
+  20 posts + _embed           10670ms    1250 KB  EXCEEDS 10s BUDGET
+  100 posts, _fields only      6769ms      14 KB  ok
+
+10. WP pages inventory (for route allowlist — do not invent routes)
+--------------------------------------------------------------------------
+  Total pages              7
+  /about-us/                           About Us
+  /disclaimer/                         Disclaimer
+  /terms-conditions/                   Terms   Conditions
+  /privacy-policy/                     Privacy Policy
+  /contact-us/                         Contact Us
+  /all-post/                           All Post
+  /                                    Home
+
+11. Tags / authors / media counts
+--------------------------------------------------------------------------
+  tags                     517
+  users                    3
+  media                    168
+
+==========================================================================
+  completed in 142.6s

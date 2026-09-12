@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# verify builds
+/.next-verify/
+
+# env — but keep the example
+!.env.example
+
+# lighthouse reports
+localhost_*.report.html

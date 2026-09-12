@@ -1,0 +1,620 @@
+{
+  "site": "thelondonhub.co.uk",
+  "generatedAt": "2026-09-12T10:11:24.364Z",
+  "status": "proposed",
+  "note": "PROPOSAL — awaiting publisher review. Nothing here is executed: merges happen in WordPress (and as redirects in this app) only after that review, and this repo never edits WordPress. Targets marked `reviewed: true` were corrected by hand in config/category-overrides.ts and are authoritative — the heuristic never overrides them. `overlap` = share of the source category’s posts already assigned to the target. Once reviewed, this file drives the 308 redirects generated in config/redirects.ts.",
+  "keepers": [
+    "business",
+    "entertainment",
+    "football",
+    "lifestyle",
+    "politics",
+    "sports",
+    "technology",
+    "uk-news",
+    "world-news"
+  ],
+  "merges": [
+    {
+      "from": "news",
+      "to": "uk-news",
+      "postCount": 1,
+      "reason": "duplicate-concept",
+      "overlap": 0
+    },
+    {
+      "from": "english-football",
+      "to": "football",
+      "postCount": 2,
+      "reason": "duplicate-concept",
+      "overlap": 1
+    },
+    {
+      "from": "european-football",
+      "to": "football",
+      "postCount": 1,
+      "reason": "duplicate-concept",
+      "overlap": 1
+    },
+    {
+      "from": "football-analysis",
+      "to": "football",
+      "postCount": 1,
+      "reason": "duplicate-concept",
+      "overlap": 0
+    },
+    {
+      "from": "football-match-reviews",
+      "to": "football",
+      "postCount": 1,
+      "reason": "duplicate-concept",
+      "overlap": 0
+    },
+    {
+      "from": "football-previews",
+      "to": "football",
+      "postCount": 1,
+      "reason": "duplicate-concept",
+      "overlap": 0
+    },
+    {
+      "from": "football-rivalries",
+      "to": "football",
+      "postCount": 1,
+      "reason": "duplicate-concept",
+      "overlap": 0
+    },
+    {
+      "from": "technology-innovation",
+      "to": "technology",
+      "postCount": 2,
+      "reason": "duplicate-concept",
+      "overlap": 0.5
+    },
+    {
+      "from": "sports-news",
+      "to": "sports",
+      "postCount": 8,
+      "reason": "duplicate-concept",
+      "overlap": 0
+    },
+    {
+      "from": "sports-analysis",
+      "to": "sports",
+      "postCount": 4,
+      "reason": "duplicate-concept",
+      "overlap": 0
+    },
+    {
+      "from": "sports-biography",
+      "to": "sports",
+      "postCount": 1,
+      "reason": "duplicate-concept",
+      "overlap": 0
+    },
+    {
+      "from": "premier-league",
+      "to": "football",
+      "postCount": 9,
+      "reason": "consolidate-non-keeper",
+      "overlap": 0.56
+    },
+    {
+      "from": "match-previews",
+      "to": "football",
+      "postCount": 6,
+      "reason": "consolidate-non-keeper",
+      "overlap": 1
+    },
+    {
+      "from": "health",
+      "to": "uk-news",
+      "postCount": 4,
+      "reason": "consolidate-non-keeper",
+      "overlap": 0.75
+    },
+    {
+      "from": "trending-stories",
+      "to": "uk-news",
+      "postCount": 3,
+      "reason": "consolidate-non-keeper",
+      "overlap": 1
+    },
+    {
+      "from": "match-analysis",
+      "to": "football",
+      "postCount": 3,
+      "reason": "consolidate-non-keeper",
+      "overlap": 0.67
+    },
+    {
+      "from": "television",
+      "to": "entertainment",
+      "postCount": 3,
+      "reason": "consolidate-non-keeper",
+      "overlap": 0.67
+    },
+    {
+      "from": "ai-automation",
+      "to": "technology",
+      "postCount": 2,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "history",
+      "to": "politics",
+      "postCount": 2,
+      "reason": "thin-category",
+      "overlap": 0.5
+    },
+    {
+      "from": "boxing",
+      "to": "sports",
+      "postCount": 2,
+      "reason": "thin-category",
+      "overlap": 0.5
+    },
+    {
+      "from": "cricket",
+      "to": "sports",
+      "postCount": 2,
+      "reason": "thin-category",
+      "overlap": 0.5
+    },
+    {
+      "from": "environment",
+      "to": "business",
+      "postCount": 2,
+      "reason": "thin-category",
+      "overlap": 0.5
+    },
+    {
+      "from": "renewable-energy",
+      "to": "technology",
+      "postCount": 2,
+      "reason": "thin-category",
+      "overlap": 0.5
+    },
+    {
+      "from": "live-events",
+      "to": "entertainment",
+      "postCount": 2,
+      "reason": "thin-category",
+      "overlap": 0.5
+    },
+    {
+      "from": "shopping",
+      "to": "lifestyle",
+      "postCount": 2,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "player-profiles",
+      "to": "football",
+      "postCount": 2,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "top-stories",
+      "to": "uk-news",
+      "postCount": 2,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "wrestling",
+      "to": "entertainment",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "automobiles",
+      "to": "technology",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "electric-vehicles",
+      "to": "technology",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "media",
+      "to": "entertainment",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "consumer-advice",
+      "to": "lifestyle",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "social-justice",
+      "to": "politics",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "community-leadership",
+      "to": "politics",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "celebrity-profiles",
+      "to": "entertainment",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "british-artists",
+      "to": "entertainment",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "music",
+      "to": "entertainment",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "holidays",
+      "to": "lifestyle",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "ligue-1",
+      "to": "football",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "world-affairs",
+      "to": "politics",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "robotics",
+      "to": "technology",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "academia",
+      "to": "politics",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "productivity",
+      "to": "technology",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "digital-tools",
+      "to": "technology",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "european-competitions",
+      "to": "football",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "japan-asia-news",
+      "to": "world-news",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "natural-disasters",
+      "to": "world-news",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "tactical-analysis",
+      "to": "uk-news",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "aviation",
+      "to": "business",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "celebrity-profile",
+      "to": "entertainment",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "film-television",
+      "to": "entertainment",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "event-news",
+      "to": "technology",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "records",
+      "to": "sports",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "basketball",
+      "to": "sports",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "streaming-news",
+      "to": "entertainment",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "science-fiction",
+      "to": "entertainment",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "athlete-profiles",
+      "to": "sports",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "darts",
+      "to": "sports",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "nba-analysis",
+      "to": "sports",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "film",
+      "to": "entertainment",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    },
+    {
+      "from": "live-coverage",
+      "to": "football",
+      "postCount": 1,
+      "reason": "thin-category",
+      "overlap": 1
+    }
+  ],
+  "quarantined": [
+    {
+      "slug": "google-news",
+      "reason": "Syndication meta-category (32 of 105 posts at recon, 2026-09-10) that duplicates stories already filed under their real sections. Promoting or merging it would surface duplicates in nav, homepage and sitemaps. /category/google-news/ stays reachable but is never promoted and never indexed.",
+      "postCount": 32
+    }
+  ],
+  "unresolved": [
+    {
+      "slug": "culture",
+      "count": 5,
+      "note": "weak signal: only 20% of its posts co-assigned to \"lifestyle\" — pick a target manually"
+    },
+    {
+      "slug": "biography",
+      "count": 3,
+      "note": "weak signal: only 33% of its posts co-assigned to \"entertainment\" — pick a target manually"
+    },
+    {
+      "slug": "celebrity-news",
+      "count": 3,
+      "note": "weak signal: only 33% of its posts co-assigned to \"sports\" — pick a target manually"
+    },
+    {
+      "slug": "literature",
+      "count": 2,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "travel",
+      "count": 2,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "community",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "family-activities",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "wildlife",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "ferrari",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "science",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "formula-one",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "motorsport",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "astronomy",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "science-2",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "la-liga",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "writing-and-journalism",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "medical-devices",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "fitness",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "nature",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "global-affairs",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "education",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "energy-utilities",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "mythology",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "classics",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "royal-news",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "legal-cases",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "legendary-athletes",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "film-history",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "true-crime",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "economy",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "drama",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "british-culture",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    },
+    {
+      "slug": "celebrities",
+      "count": 1,
+      "note": "no keeper co-occurrence at all — pick a target manually or delete"
+    }
+  ]
+}

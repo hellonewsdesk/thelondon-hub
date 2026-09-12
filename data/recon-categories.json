@@ -1,0 +1,834 @@
+[
+  {
+    "id": 185,
+    "slug": "uk-news",
+    "name": "UK News",
+    "count": 36,
+    "link": "https://thelondonhub.co.uk/category/uk-news/",
+    "parent": 0
+  },
+  {
+    "id": 120,
+    "slug": "world-news",
+    "name": "World News",
+    "count": 34,
+    "link": "https://thelondonhub.co.uk/category/world-news/",
+    "parent": 0
+  },
+  {
+    "id": 186,
+    "slug": "google-news",
+    "name": "Google News",
+    "count": 32,
+    "link": "https://thelondonhub.co.uk/category/google-news/",
+    "parent": 0
+  },
+  {
+    "id": 145,
+    "slug": "football",
+    "name": "Football",
+    "count": 19,
+    "link": "https://thelondonhub.co.uk/category/football/",
+    "parent": 0
+  },
+  {
+    "id": 66,
+    "slug": "technology",
+    "name": "Technology",
+    "count": 14,
+    "link": "https://thelondonhub.co.uk/category/technology/",
+    "parent": 0
+  },
+  {
+    "id": 146,
+    "slug": "sports",
+    "name": "Sports",
+    "count": 11,
+    "link": "https://thelondonhub.co.uk/category/sports/",
+    "parent": 0
+  },
+  {
+    "id": 129,
+    "slug": "entertainment",
+    "name": "Entertainment",
+    "count": 10,
+    "link": "https://thelondonhub.co.uk/category/entertainment/",
+    "parent": 0
+  },
+  {
+    "id": 208,
+    "slug": "premier-league",
+    "name": "Premier League",
+    "count": 9,
+    "link": "https://thelondonhub.co.uk/category/premier-league/",
+    "parent": 0
+  },
+  {
+    "id": 311,
+    "slug": "sports-news",
+    "name": "Sports News",
+    "count": 8,
+    "link": "https://thelondonhub.co.uk/category/sports-news/",
+    "parent": 0
+  },
+  {
+    "id": 82,
+    "slug": "lifestyle",
+    "name": "Lifestyle",
+    "count": 8,
+    "link": "https://thelondonhub.co.uk/category/lifestyle/",
+    "parent": 0
+  },
+  {
+    "id": 144,
+    "slug": "match-previews",
+    "name": "Match Previews",
+    "count": 6,
+    "link": "https://thelondonhub.co.uk/category/match-previews/",
+    "parent": 0
+  },
+  {
+    "id": 52,
+    "slug": "business",
+    "name": "Business",
+    "count": 6,
+    "link": "https://thelondonhub.co.uk/category/business/",
+    "parent": 0
+  },
+  {
+    "id": 121,
+    "slug": "politics",
+    "name": "Politics",
+    "count": 5,
+    "link": "https://thelondonhub.co.uk/category/politics/",
+    "parent": 0
+  },
+  {
+    "id": 253,
+    "slug": "culture",
+    "name": "culture",
+    "count": 4,
+    "link": "https://thelondonhub.co.uk/category/culture/",
+    "parent": 0
+  },
+  {
+    "id": 143,
+    "slug": "sports-analysis",
+    "name": "Sports Analysis",
+    "count": 4,
+    "link": "https://thelondonhub.co.uk/category/sports-analysis/",
+    "parent": 0
+  },
+  {
+    "id": 98,
+    "slug": "health",
+    "name": "Health",
+    "count": 4,
+    "link": "https://thelondonhub.co.uk/category/health/",
+    "parent": 0
+  },
+  {
+    "id": 252,
+    "slug": "biography",
+    "name": "Biography",
+    "count": 3,
+    "link": "https://thelondonhub.co.uk/category/biography/",
+    "parent": 0
+  },
+  {
+    "id": 33,
+    "slug": "trending-stories",
+    "name": "Trending Stories",
+    "count": 3,
+    "link": "https://thelondonhub.co.uk/category/trending-stories/",
+    "parent": 0
+  },
+  {
+    "id": 268,
+    "slug": "television",
+    "name": "Television",
+    "count": 3,
+    "link": "https://thelondonhub.co.uk/category/television/",
+    "parent": 0
+  },
+  {
+    "id": 153,
+    "slug": "match-analysis",
+    "name": "Match Analysis",
+    "count": 3,
+    "link": "https://thelondonhub.co.uk/category/match-analysis/",
+    "parent": 0
+  },
+  {
+    "id": 416,
+    "slug": "cricket",
+    "name": "Cricket",
+    "count": 2,
+    "link": "https://thelondonhub.co.uk/category/cricket/",
+    "parent": 0
+  },
+  {
+    "id": 515,
+    "slug": "live-events",
+    "name": "Live Events",
+    "count": 2,
+    "link": "https://thelondonhub.co.uk/category/live-events/",
+    "parent": 0
+  },
+  {
+    "id": 219,
+    "slug": "literature",
+    "name": "Literature",
+    "count": 2,
+    "link": "https://thelondonhub.co.uk/category/literature/",
+    "parent": 0
+  },
+  {
+    "id": 452,
+    "slug": "english-football",
+    "name": "English Football",
+    "count": 2,
+    "link": "https://thelondonhub.co.uk/category/english-football/",
+    "parent": 0
+  },
+  {
+    "id": 229,
+    "slug": "renewable-energy",
+    "name": "Renewable Energy",
+    "count": 2,
+    "link": "https://thelondonhub.co.uk/category/renewable-energy/",
+    "parent": 0
+  },
+  {
+    "id": 492,
+    "slug": "ai-automation",
+    "name": "AI   Automation",
+    "count": 2,
+    "link": "https://thelondonhub.co.uk/category/ai-automation/",
+    "parent": 0
+  },
+  {
+    "id": 254,
+    "slug": "history",
+    "name": "HISTORY",
+    "count": 2,
+    "link": "https://thelondonhub.co.uk/category/history/",
+    "parent": 0
+  },
+  {
+    "id": 230,
+    "slug": "technology-innovation",
+    "name": "Technology   Innovation",
+    "count": 2,
+    "link": "https://thelondonhub.co.uk/category/technology-innovation/",
+    "parent": 0
+  },
+  {
+    "id": 304,
+    "slug": "celebrity-news",
+    "name": "Celebrity News",
+    "count": 2,
+    "link": "https://thelondonhub.co.uk/category/celebrity-news/",
+    "parent": 0
+  },
+  {
+    "id": 533,
+    "slug": "player-profiles",
+    "name": "Player Profiles",
+    "count": 2,
+    "link": "https://thelondonhub.co.uk/category/player-profiles/",
+    "parent": 0
+  },
+  {
+    "id": 117,
+    "slug": "travel",
+    "name": "Travel",
+    "count": 2,
+    "link": "https://thelondonhub.co.uk/category/travel/",
+    "parent": 0
+  },
+  {
+    "id": 116,
+    "slug": "top-stories",
+    "name": "Top Stories",
+    "count": 2,
+    "link": "https://thelondonhub.co.uk/category/top-stories/",
+    "parent": 0
+  },
+  {
+    "id": 137,
+    "slug": "shopping",
+    "name": "Shopping",
+    "count": 2,
+    "link": "https://thelondonhub.co.uk/category/shopping/",
+    "parent": 0
+  },
+  {
+    "id": 122,
+    "slug": "environment",
+    "name": "Environment",
+    "count": 2,
+    "link": "https://thelondonhub.co.uk/category/environment/",
+    "parent": 0
+  },
+  {
+    "id": 553,
+    "slug": "media",
+    "name": "Media",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/media/",
+    "parent": 0
+  },
+  {
+    "id": 546,
+    "slug": "ligue-1",
+    "name": "Ligue 1",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/ligue-1/",
+    "parent": 0
+  },
+  {
+    "id": 409,
+    "slug": "community",
+    "name": "Community",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/community/",
+    "parent": 0
+  },
+  {
+    "id": 402,
+    "slug": "electric-vehicles",
+    "name": "Electric Vehicles",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/electric-vehicles/",
+    "parent": 0
+  },
+  {
+    "id": 401,
+    "slug": "automobiles",
+    "name": "Automobiles",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/automobiles/",
+    "parent": 0
+  },
+  {
+    "id": 394,
+    "slug": "wrestling",
+    "name": "Wrestling",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/wrestling/",
+    "parent": 0
+  },
+  {
+    "id": 387,
+    "slug": "family-activities",
+    "name": "Family Activities",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/family-activities/",
+    "parent": 0
+  },
+  {
+    "id": 386,
+    "slug": "wildlife",
+    "name": "Wildlife",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/wildlife/",
+    "parent": 0
+  },
+  {
+    "id": 381,
+    "slug": "consumer-advice",
+    "name": "Consumer Advice",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/consumer-advice/",
+    "parent": 0
+  },
+  {
+    "id": 374,
+    "slug": "social-justice",
+    "name": "Social Justice",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/social-justice/",
+    "parent": 0
+  },
+  {
+    "id": 373,
+    "slug": "community-leadership",
+    "name": "Community Leadership",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/community-leadership/",
+    "parent": 0
+  },
+  {
+    "id": 360,
+    "slug": "celebrity-profiles",
+    "name": "Celebrity Profiles",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/celebrity-profiles/",
+    "parent": 0
+  },
+  {
+    "id": 354,
+    "slug": "british-artists",
+    "name": "British Artists",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/british-artists/",
+    "parent": 0
+  },
+  {
+    "id": 353,
+    "slug": "music",
+    "name": "Music",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/music/",
+    "parent": 0
+  },
+  {
+    "id": 494,
+    "slug": "global-affairs",
+    "name": "Global Affairs",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/global-affairs/",
+    "parent": 0
+  },
+  {
+    "id": 526,
+    "slug": "nature",
+    "name": "Nature",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/nature/",
+    "parent": 0
+  },
+  {
+    "id": 470,
+    "slug": "motorsport",
+    "name": "Motorsport",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/motorsport/",
+    "parent": 0
+  },
+  {
+    "id": 471,
+    "slug": "formula-one",
+    "name": "Formula One",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/formula-one/",
+    "parent": 0
+  },
+  {
+    "id": 472,
+    "slug": "ferrari",
+    "name": "Ferrari",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/ferrari/",
+    "parent": 0
+  },
+  {
+    "id": 516,
+    "slug": "productivity",
+    "name": "Productivity",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/productivity/",
+    "parent": 0
+  },
+  {
+    "id": 479,
+    "slug": "academia",
+    "name": "Academia",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/academia/",
+    "parent": 0
+  },
+  {
+    "id": 491,
+    "slug": "robotics",
+    "name": "Robotics",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/robotics/",
+    "parent": 0
+  },
+  {
+    "id": 493,
+    "slug": "science",
+    "name": "Science\\",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/science/",
+    "parent": 0
+  },
+  {
+    "id": 503,
+    "slug": "european-competitions",
+    "name": "European Competitions",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/european-competitions/",
+    "parent": 0
+  },
+  {
+    "id": 463,
+    "slug": "european-football",
+    "name": "European Football",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/european-football/",
+    "parent": 0
+  },
+  {
+    "id": 517,
+    "slug": "digital-tools",
+    "name": "Digital Tools",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/digital-tools/",
+    "parent": 0
+  },
+  {
+    "id": 427,
+    "slug": "fitness",
+    "name": "Fitness",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/fitness/",
+    "parent": 0
+  },
+  {
+    "id": 428,
+    "slug": "medical-devices",
+    "name": "Medical Devices",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/medical-devices/",
+    "parent": 0
+  },
+  {
+    "id": 435,
+    "slug": "writing-and-journalism",
+    "name": "Writing and Journalism",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/writing-and-journalism/",
+    "parent": 0
+  },
+  {
+    "id": 564,
+    "slug": "world-affairs",
+    "name": "World Affairs",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/world-affairs/",
+    "parent": 0
+  },
+  {
+    "id": 525,
+    "slug": "science-2",
+    "name": "Science",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/science-2/",
+    "parent": 0
+  },
+  {
+    "id": 442,
+    "slug": "football-analysis",
+    "name": "Football Analysis",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/football-analysis/",
+    "parent": 0
+  },
+  {
+    "id": 451,
+    "slug": "la-liga",
+    "name": "La Liga",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/la-liga/",
+    "parent": 0
+  },
+  {
+    "id": 524,
+    "slug": "astronomy",
+    "name": "Astronomy",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/astronomy/",
+    "parent": 0
+  },
+  {
+    "id": 346,
+    "slug": "holidays",
+    "name": "Holidays",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/holidays/",
+    "parent": 0
+  },
+  {
+    "id": 339,
+    "slug": "nba-analysis",
+    "name": "NBA Analysis",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/nba-analysis/",
+    "parent": 0
+  },
+  {
+    "id": 118,
+    "slug": "education",
+    "name": "Education",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/education/",
+    "parent": 0
+  },
+  {
+    "id": 228,
+    "slug": "energy-utilities",
+    "name": "Energy   Utilities",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/energy-utilities/",
+    "parent": 0
+  },
+  {
+    "id": 221,
+    "slug": "mythology",
+    "name": "Mythology",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/mythology/",
+    "parent": 0
+  },
+  {
+    "id": 220,
+    "slug": "classics",
+    "name": "Classics",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/classics/",
+    "parent": 0
+  },
+  {
+    "id": 218,
+    "slug": "japan-asia-news",
+    "name": "Japan / Asia News",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/japan-asia-news/",
+    "parent": 0
+  },
+  {
+    "id": 217,
+    "slug": "natural-disasters",
+    "name": "Natural Disasters",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/natural-disasters/",
+    "parent": 0
+  },
+  {
+    "id": 210,
+    "slug": "tactical-analysis",
+    "name": "Tactical Analysis",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/tactical-analysis/",
+    "parent": 0
+  },
+  {
+    "id": 209,
+    "slug": "football-match-reviews",
+    "name": "Football Match Reviews",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/football-match-reviews/",
+    "parent": 0
+  },
+  {
+    "id": 193,
+    "slug": "football-previews",
+    "name": "Football Previews",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/football-previews/",
+    "parent": 0
+  },
+  {
+    "id": 184,
+    "slug": "football-rivalries",
+    "name": "Football Rivalries",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/football-rivalries/",
+    "parent": 0
+  },
+  {
+    "id": 177,
+    "slug": "news",
+    "name": "News",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/news/",
+    "parent": 0
+  },
+  {
+    "id": 168,
+    "slug": "aviation",
+    "name": "Aviation",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/aviation/",
+    "parent": 0
+  },
+  {
+    "id": 161,
+    "slug": "celebrity-profile",
+    "name": "Celebrity Profile",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/celebrity-profile/",
+    "parent": 0
+  },
+  {
+    "id": 160,
+    "slug": "film-television",
+    "name": "Film   Television",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/film-television/",
+    "parent": 0
+  },
+  {
+    "id": 131,
+    "slug": "event-news",
+    "name": "Event News",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/event-news/",
+    "parent": 0
+  },
+  {
+    "id": 417,
+    "slug": "records",
+    "name": "Records",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/records/",
+    "parent": 0
+  },
+  {
+    "id": 243,
+    "slug": "royal-news",
+    "name": "Royal News",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/royal-news/",
+    "parent": 0
+  },
+  {
+    "id": 244,
+    "slug": "legal-cases",
+    "name": "Legal Cases",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/legal-cases/",
+    "parent": 0
+  },
+  {
+    "id": 331,
+    "slug": "streaming-news",
+    "name": "Streaming News",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/streaming-news/",
+    "parent": 0
+  },
+  {
+    "id": 330,
+    "slug": "science-fiction",
+    "name": "Science Fiction",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/science-fiction/",
+    "parent": 0
+  },
+  {
+    "id": 318,
+    "slug": "athlete-profiles",
+    "name": "Athlete Profiles",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/athlete-profiles/",
+    "parent": 0
+  },
+  {
+    "id": 317,
+    "slug": "darts",
+    "name": "Darts",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/darts/",
+    "parent": 0
+  },
+  {
+    "id": 303,
+    "slug": "boxing",
+    "name": "Boxing",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/boxing/",
+    "parent": 0
+  },
+  {
+    "id": 296,
+    "slug": "legendary-athletes",
+    "name": "Legendary Athletes",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/legendary-athletes/",
+    "parent": 0
+  },
+  {
+    "id": 295,
+    "slug": "sports-biography",
+    "name": "Sports Biography",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/sports-biography/",
+    "parent": 0
+  },
+  {
+    "id": 289,
+    "slug": "film-history",
+    "name": "Film History",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/film-history/",
+    "parent": 0
+  },
+  {
+    "id": 338,
+    "slug": "basketball",
+    "name": "Basketball",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/basketball/",
+    "parent": 0
+  },
+  {
+    "id": 245,
+    "slug": "true-crime",
+    "name": "True Crime",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/true-crime/",
+    "parent": 0
+  },
+  {
+    "id": 261,
+    "slug": "economy",
+    "name": "Economy",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/economy/",
+    "parent": 0
+  },
+  {
+    "id": 269,
+    "slug": "drama",
+    "name": "Drama",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/drama/",
+    "parent": 0
+  },
+  {
+    "id": 270,
+    "slug": "british-culture",
+    "name": "British Culture",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/british-culture/",
+    "parent": 0
+  },
+  {
+    "id": 277,
+    "slug": "film",
+    "name": "Film",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/film/",
+    "parent": 0
+  },
+  {
+    "id": 282,
+    "slug": "live-coverage",
+    "name": "Live Coverage",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/live-coverage/",
+    "parent": 0
+  },
+  {
+    "id": 288,
+    "slug": "celebrities",
+    "name": "Celebrities",
+    "count": 1,
+    "link": "https://thelondonhub.co.uk/category/celebrities/",
+    "parent": 0
+  }
+]
