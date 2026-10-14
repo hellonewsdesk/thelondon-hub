@@ -2399,3 +2399,32 @@ a.section-head__label:focus-visible {
     transition: none;
   }
 }
+
+/* ==========================================================================
+   ARTICLE LAYOUT — story column + sticky right rail on wide screens
+   ========================================================================== */
+.article-layout {
+  display: grid;
+  gap: 2.5rem;
+}
+.article-layout__main {
+  min-width: 0;
+  max-width: 760px;
+}
+.article-sidebar {
+  min-width: 0;
+}
+.article-sidebar__sections {
+  margin-block-start: 2rem;
+}
+@media (min-width: 1024px) {
+  .article-layout {
+    grid-template-columns: minmax(0, 760px) 320px;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .article-sidebar {
+    position: sticky;
+    top: 1.5rem;
+  }
+}

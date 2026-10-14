@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getCurrentSite } from '../../lib/site';
 import { DEFAULT_SITE } from '../../config/sites';
 import { getPostBySlug, getPosts, getRelatedPosts } from '../../lib/wp';
+import { getCategories } from '../../lib/wp-cache';
 import {
   excerptText,
   getFeaturedImage,
@@ -28,6 +29,7 @@ import { ArticleHeader } from '../../components/ArticleHeader';
 import { ArticleBody } from '../../components/ArticleBody';
 import { RelatedStories } from '../../components/RelatedStories';
 import { MoreStories } from '../../components/MoreStories';
+import { ArticleSidebar } from '../../components/ArticleSidebar';
 
 /**
  * The article page — the root-level catch-all matching WordPress's
@@ -134,10 +136,14 @@ export default async function ArticlePage({
   // same-section rule strictly and drops the recency padding getRelatedPosts
   // uses to fill thin categories, so it needs headroom to reach three
   // genuine matches. The latest rail feeds the MoreStories tail.
-  const [related, latest] = await Promise.all([
+  const [related, latest, categories] = await Promise.all([
     getRelatedPosts(site, post, 6),
-    getPosts(site, { perPage: 6, exclude: [post.id] }),
+    getPosts(site, { perPage: 11, exclude: [post.id] }),
+    getCategories(site).catch(() => []),
   ]);
+  // The first five feed the sidebar; the rest form the page-tail river.
+  const sidebarPosts = latest.posts.slice(0, 5);
+  const tailPosts = latest.posts.slice(5);
 
   const category = getPrimaryCategory(post);
   const now = new Date();
@@ -175,15 +181,23 @@ export default async function ArticlePage({
         {/* Single column, capped at the width the ArticleHeader hero image
             sizes itself for (760px) — the body's own 66ch measure sits
             inside it. ShareRow lives in the header's bordered meta strip. */}
-        <article style={{ maxWidth: '760px' }}>
-          <ArticleHeader site={site} post={post} />
-          <ArticleBody site={site} post={post} />
-        </article>
+        <div className="article-layout">
+          <article className="article-layout__main">
+            <ArticleHeader site={site} post={post} />
+            <ArticleBody site={site} post={post} />
+          </article>
+          <ArticleSidebar
+            site={site}
+            posts={sidebarPosts}
+            categories={categories}
+            now={now}
+          />
+        </div>
 
         {/* Same-section stories only; renders nothing over filler. */}
         <RelatedStories site={site} post={post} posts={related} now={now} />
 
-        <MoreStories site={site} posts={latest.posts} now={now} />
+        <MoreStories site={site} posts={tailPosts} now={now} />
       </div>
     </>
   );
