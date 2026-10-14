@@ -8,11 +8,11 @@
  * not merely escaped.
  *
  * This module is server-only by construction (it is imported from server
- * components) and must never be pulled into a client bundle: DOMPurify's
- * jsdom backend is ~2MB.
+ * components) and must never be pulled into a client bundle: sanitize-html is pure JS
+ * (htmlparser2) — no jsdom, so it loads in any serverless runtime.
  */
 
-import DOMPurify from 'isomorphic-dompurify';
+import sanitizeHtml from 'sanitize-html';
 
 /** Hosts allowed to appear in an <iframe>. Everything else is dropped. */
 const IFRAME_ALLOWLIST = [
@@ -30,94 +30,6 @@ function isAllowedIframe(src: string): boolean {
   } catch {
     return false;
   }
-}
-
-/**
- * The subset of the DOM element API the hook touches. Declared structurally
- * so nothing here depends on a DOM lib global existing at runtime.
- */
-interface ElementLike {
-  tagName: string;
-  getAttribute(name: string): string | null;
-  setAttribute(name: string, value: string): void;
-  removeAttribute(name: string): void;
-  remove(): void;
-}
-
-/**
- * Hook registration is global to the DOMPurify instance, so it must happen
- * exactly once. Module scope gives us that for free.
- */
-let hooksInstalled = false;
-
-function installHooks(internalHost: string): void {
-  if (hooksInstalled) return;
-  hooksInstalled = true;
-
-  DOMPurify.addHook('afterSanitizeAttributes', (rawNode) => {
-    // NOT `instanceof Element`: on the server DOMPurify runs against jsdom,
-    // whose Element constructor lives on the jsdom window rather than
-    // globalThis. Referencing the bare global throws ReferenceError at
-    // render time. Duck-typing is the portable check.
-    const node = rawNode as unknown as ElementLike;
-    if (typeof node?.tagName !== 'string') return;
-
-    const tag = node.tagName.toLowerCase();
-
-    if (tag === 'a') {
-      const href = node.getAttribute('href') ?? '';
-
-      // Drop anything that is not http(s), a fragment, or a root-relative path.
-      if (href && !/^(https?:|\/|#|mailto:|tel:)/i.test(href)) {
-        node.removeAttribute('href');
-        return;
-      }
-
-      let external = false;
-      if (/^https?:/i.test(href)) {
-        try {
-          external = new URL(href).hostname.replace(/^www\./, '') !== internalHost;
-        } catch {
-          external = true;
-        }
-      }
-
-      if (external) {
-        // Outbound links from syndicated copy are untrusted and unendorsed.
-        node.setAttribute('rel', 'noopener noreferrer nofollow ugc');
-        node.setAttribute('target', '_blank');
-      } else {
-        // Internal links stay bare and same-tab.
-        node.removeAttribute('target');
-        node.removeAttribute('rel');
-      }
-    }
-
-    if (tag === 'img') {
-      // Recon found 0 inline <img> in bodies today — this is the safety net
-      // for the day the pipeline starts embedding them.
-      node.setAttribute('loading', 'lazy');
-      node.setAttribute('decoding', 'async');
-      // An unsized inline image is a guaranteed layout shift.
-      if (!node.getAttribute('width')) node.setAttribute('width', '1200');
-      if (!node.getAttribute('height')) node.setAttribute('height', '800');
-    }
-
-    if (tag === 'iframe') {
-      const src = node.getAttribute('src') ?? '';
-      if (!isAllowedIframe(src)) {
-        node.remove();
-        return;
-      }
-      node.setAttribute('loading', 'lazy');
-      node.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
-      node.setAttribute(
-        'sandbox',
-        'allow-scripts allow-same-origin allow-presentation allow-popups',
-      );
-      node.setAttribute('allowfullscreen', 'true');
-    }
-  });
 }
 
 /** Tags we allow through. Recon says bodies only use a small prose subset. */
@@ -158,18 +70,62 @@ export function sanitizeArticleHtml(
 ): string {
   if (!html) return '';
 
-  installHooks(internalHost.replace(/^www\./, ''));
+  const host = internalHost.replace(/^www\./, '');
 
-  return DOMPurify.sanitize(html, {
-    ALLOWED_TAGS,
-    ALLOWED_ATTR,
-    // Belt and braces: these are already excluded by the allowlist, but being
-    // explicit means a future edit to ALLOWED_TAGS cannot reintroduce them.
-    FORBID_TAGS: ['script', 'style', 'noscript', 'form', 'input', 'button', 'object', 'embed', 'link', 'meta', 'base'],
-    FORBID_ATTR: ['style', 'onerror', 'onload', 'onclick', 'onmouseover', 'srcdoc', 'formaction', 'ping'],
-    ALLOW_DATA_ATTR: false,
-    ALLOW_ARIA_ATTR: true,
-    KEEP_CONTENT: true,
-    RETURN_TRUSTED_TYPE: false,
+  return sanitizeHtml(html, {
+    allowedTags: ALLOWED_TAGS,
+    allowedAttributes: { '*': ALLOWED_ATTR },
+    // `script`/`style` content is dropped, not kept as text.
+    nonTextTags: ['script', 'style', 'textarea', 'option', 'noscript'],
+    // http(s), mailto and tel only; root-relative and fragment links carry no scheme.
+    allowedSchemes: ['http', 'https', 'mailto', 'tel'],
+    allowedSchemesByTag: { img: ['http', 'https'], iframe: ['https'] },
+    allowProtocolRelative: false,
+    // Iframes survive only for the video allowlist.
+    exclusiveFilter: (frame) =>
+      frame.tag === 'iframe' && !isAllowedIframe(frame.attribs.src ?? ''),
+    transformTags: {
+      a: (tagName, attribs) => {
+        const href = attribs.href ?? '';
+        let external = false;
+        if (/^https?:/i.test(href)) {
+          try {
+            external = new URL(href).hostname.replace(/^www\./, '') !== host;
+          } catch {
+            external = true;
+          }
+        }
+        const rest = { ...attribs };
+        delete rest.target;
+        delete rest.rel;
+        return {
+          tagName,
+          attribs: external
+            ? { ...rest, rel: 'noopener noreferrer nofollow ugc', target: '_blank' }
+            : rest,
+        };
+      },
+      img: (tagName, attribs) => ({
+        tagName,
+        attribs: {
+          ...attribs,
+          loading: 'lazy',
+          decoding: 'async',
+          // An unsized inline image is a guaranteed layout shift.
+          width: attribs.width || '1200',
+          height: attribs.height || '800',
+        },
+      }),
+      iframe: (tagName, attribs) => ({
+        tagName,
+        attribs: {
+          ...attribs,
+          loading: 'lazy',
+          referrerpolicy: 'strict-origin-when-cross-origin',
+          sandbox: 'allow-scripts allow-same-origin allow-presentation allow-popups',
+          allowfullscreen: 'true',
+        },
+      }),
+    },
   });
 }

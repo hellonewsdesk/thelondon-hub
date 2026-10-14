@@ -136,20 +136,6 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
 
   /**
-   * Keep the sanitiser out of the server bundle.
-   *
-   * isomorphic-dompurify carries jsdom, which resolves part of its dependency
-   * graph through dynamic require() calls webpack cannot follow. Leaving it
-   * external means it is required at runtime from node_modules, the way the
-   * package expects.
-   *
-   * The Birmingham sibling shipped without this and every article on Vercel
-   * returned a cached 500 — see lib/sanitize.ts, which also loads the package
-   * lazily so a failure here can never take a whole route down with it.
-   */
-  serverExternalPackages: ['isomorphic-dompurify'],
-
-  /**
    * Build output directory.
    *
    * Overridable so a production build can be verified while a dev server is
