@@ -44,14 +44,14 @@ export const revalidate = 10800;
 export const dynamicParams = true;
 
 /**
- * Prebuild only the 50 most recent slugs.
+ * Prebuild only the 12 most recent slugs.
  *
  * Recon: 12 posts + _embed costs ~11.8s cold on this origin, and prebuilding
  * all 105 (and growing) would strain any CI budget for little gain — the
  * tail renders on first request and is then cached for 3h.
  */
 export async function generateStaticParams() {
-  const TARGET = 50;
+  const TARGET = 12;
   const PER_PAGE = 25;
 
   try {

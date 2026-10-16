@@ -39,6 +39,9 @@ export const MAX_EMBED_PER_PAGE = 20;
  */
 const REQUEST_TIMEOUT_MS = 20_000;
 
+/** Tries per request when the origin reports it is busy. */
+const FETCH_ATTEMPTS = 4;
+
 /** Backstop so a bad totalPages header can never spin forever. */
 const MAX_PAGES = 200;
 
@@ -144,11 +147,22 @@ export async function wp<T>(
     },
   };
 
-  const res = await fetch(url, init);
+  // The origin is shared hosting that answers 508/429/5xx when it is busy
+  // (concurrent build workers trip it). Back off and retry a few times
+  // rather than failing a build or a visitor's render on a momentary limit.
+  let res: Response | undefined;
+  for (let attempt = 0; attempt < FETCH_ATTEMPTS; attempt++) {
+    res = await fetch(url, init);
+    const busy = res.status === 429 || res.status === 508 || res.status >= 500;
+    if (res.ok || !busy || attempt === FETCH_ATTEMPTS - 1) break;
+    await res.arrayBuffer().catch(() => undefined);
+    await new Promise((r) => setTimeout(r, 750 * 2 ** attempt + Math.random() * 400));
+  }
 
-  if (!res.ok) {
-    const body = await res.text().catch(() => '');
-    throw new WPError(res.status, path, site.hostname, body);
+  if (!res || !res.ok) {
+    const status = res?.status ?? 0;
+    const body = await res?.text().catch(() => '') ?? '';
+    throw new WPError(status, path, site.hostname, body);
   }
 
   const data = (await res.json()) as T;

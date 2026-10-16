@@ -146,6 +146,14 @@ const nextConfig: NextConfig = {
    */
   distDir: process.env.NEXT_DIST_DIR || '.next',
 
+  // The WordPress origin throttles under parallel load (508). Render few pages
+  // at a time at build, and retry a page once before failing the build.
+  staticPageGenerationTimeout: 180,
+  experimental: {
+    staticGenerationMaxConcurrency: 2,
+    staticGenerationRetryCount: 2,
+  },
+
   poweredByHeader: false,
   compress: true,
   reactStrictMode: true,
